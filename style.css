@@ -1,0 +1,80 @@
+:root {
+  --primary: #ff4b7d;
+  --primary-soft: #ffe0ec;
+  --text: #333;
+  --radius: 24px;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at top, #ffd1e1, #ffe6f0);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.card {
+  background: white;
+  width: 90%;
+  max-width: 380px;
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 10;
+}
+
+.photo-container {
+  width: 100%;
+  height: 300px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 3px solid var(--primary-soft);
+  margin: 15px 0;
+}
+
+#main-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.counter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin: 5px 0;
+}
+
+.since {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.message-section {
+  background: #fff0f6;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 15px 0;
+  border-left: 4px solid var(--primary);
+}
+
+.hearts-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  top: -50px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to { transform: translateY(110vh) rotate(360deg); }
+}
