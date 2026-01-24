@@ -13,7 +13,9 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow: hidden;
+  /* CAMBIOS AQUÍ: */
+  overflow-y: auto; /* Permite scroll vertical si es necesario */
+  padding: 20px 0;  /* Espacio extra arriba y abajo para que no pegue al borde */
 }
 
 .card {
@@ -25,6 +27,8 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
   z-index: 10;
+  /* Asegura que la tarjeta no se vea rara al scrollear */
+  margin: auto; 
 }
 
 .photo-container {
@@ -63,10 +67,12 @@ body {
   border-left: 4px solid var(--primary);
 }
 
+/* El contenedor de corazones sigue fijo para que no se mueva con el scroll */
 .hearts-container {
   position: fixed;
   inset: 0;
   pointer-events: none;
+  z-index: 1; /* Detrás de la tarjeta */
 }
 
 .heart {
