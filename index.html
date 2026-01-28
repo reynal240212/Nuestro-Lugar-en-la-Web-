@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <title>Fiorella & Reinaldo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiorella & Reinaldo ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <main class="card">
-        <header class="card-header">
-            <h1>Fiorella & Reinaldo ❤️</h1>
-            <p class="subtitle">Nuestro rinconcito en la web</p>
-        </header>
 
-        <section class="photo-section">
-            <div class="photo-container">
-                <img id="main-photo" src="img/1.jpg" alt="Nosotros">
-            </div>
+    <nav class="navbar">
+        <a href="#aniversario">Nuestra Historia</a>
+        <a href="#apoyo">Para Ti ✨</a>
+    </nav>
+
+    <div class="content-wrapper">
+        <section id="aniversario" class="section-container">
+            <main class="card">
+                <header class="card-header">
+                    <h1>Fiorella & Reinaldo ❤️</h1>
+                    <p class="subtitle">Nuestro rinconcito en la web</p>
+                </header>
+
+                <div class="photo-container">
+                    <img id="main-photo" src="img/1.jpg" alt="Nosotros">
+                </div>
+
+                <div class="counter-section">
+                    <p>Llevamos juntos</p>
+                    <p class="counter">2 meses 💘</p>
+                    <p class="since">Desde el 24/11/2025</p>
+                </div>
+
+                <div class="message-section">
+                    <h2>Feliz mes #2, mi amor</h2>
+                    <p>Hace solo dos meses empezamos esta aventura, pero siento como si mi corazón te conociera de siempre.</p>
+                </div>
+            </main>
         </section>
 
-        <section class="counter-section">
-            <p>Llevamos juntos</p>
-            <p class="counter">2 meses 💘</p>
-            <p class="since">Desde el 24/11/2025</p>
+        <section id="apoyo" class="section-container">
+            <main class="card card-support">
+                <div class="icon-header">✨</div>
+                <h2 class="support-title">Un día a la vez</h2>
+                <div class="message-section support-text">
+                    <p>No tienes que tener todo resuelto hoy. Avanza a tu ritmo, respira y confía en que cada paso te está llevando justo donde debes estar. 💕💫</p>
+                </div>
+                <footer class="card-footer">
+                    <p>Siempre contigo, Reinaldo 💌</p>
+                </footer>
+            </main>
         </section>
-
-        <section class="message-section">
-            <h2>Feliz mes #2, mi amor</h2>
-            <p>
-                Hace solo dos meses empezamos oficialmente esta aventura, pero siento como
-                si mi corazón te conociera desde siempre.
-            </p>
-            <p>
-                Este rinconcito es solo para recordarte lo mucho que te pienso. Te amo.
-            </p>
-        </section>
-
-        <footer class="card-footer">
-            <p>Hecho con mucho amor para ti 💌</p>
-        </footer>
-    </main>
+    </div>
 
     <div class="hearts-container"></div>
     <script src="script.js"></script>
 </body>
-
 </html>
