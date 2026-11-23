@@ -3,80 +3,389 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fiorella & Reinaldo ❤️</title>
+    <meta name="description" content="Nuestro rinconcito en la web — Fiorella & Reinaldo, desde el 24 de noviembre de 2025.">
+    <meta name="theme-color" content="#FAF6F1">
+    <title>Fiorella &amp; Reinaldo — Nuestro Lugar en la Web</title>
+
+    <!-- Tipografías editoriales de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <nav class="navbar">
-        <a href="#aniversario">Nuestra Historia</a>
-        <a href="#apoyo">Para Ti ✨</a>
-        <a href="#reflexion">Reflexión 📖</a>
-    </nav>
-
-    <div class="content-wrapper">
-        <section id="aniversario" class="section-container">
-            <main class="card">
-                <header class="card-header">
-                    <h1>Fiorella & Reinaldo ❤️</h1>
-                    <p class="subtitle">Nuestro rinconcito en la web</p>
-                </header>
-
-                <div class="photo-container">
-                    <img id="main-photo" src="img/1.jpg" alt="Nosotros">
-                </div>
-
-                <div class="counter-section">
-                    <p>Llevamos juntos</p>
-                    <p class="counter">2 meses 💘</p>
-                    <p class="since">Desde el 24/11/2025</p>
-                </div>
-
-                <div class="message-section">
-                    <h2>Feliz mes #2, mi amor</h2>
-                    <p>Hace solo dos meses empezamos esta aventura, pero siento como si mi corazón te conociera de siempre.</p>
-                </div>
-            </main>
-        </section>
-
-        <section id="apoyo" class="section-container">
-            <main class="card card-support">
-                <div class="icon-header">✨</div>
-                <h2 class="support-title">Un día a la vez</h2>
-                <div class="message-section support-text">
-                    <p>No tienes que tener todo resuelto hoy. Avanza a tu ritmo, respira y confía en que cada paso te está llevando justo donde debes estar. 💕💫</p>
-                </div>
-                <footer class="card-footer">
-                    <p>Siempre contigo, Reinaldo 💌</p>
-                </footer>
-            </main>
-        </section>
+    <!-- Barra sutil de progreso de lectura -->
+    <div class="scroll-progress" aria-hidden="true">
+        <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
     </div>
 
-    <section id="reflexion" class="section-container">
-        <main class="card reflection-card">
-            <header class="card-header">
-                <h2>El valor de no rendirse</h2>
-                <p class="subtitle">Una reflexión sobre nosotros</p>
-            </header>
+    <!-- Fondo ambiental con orbes suaves y partículas -->
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-orb orb-1"></div>
+        <div class="ambient-orb orb-2"></div>
+        <div class="ambient-orb orb-3"></div>
+    </div>
+    <div class="petals-container" id="petals-container" aria-hidden="true"></div>
 
-            <div class="gallery-container">
-                <img src="img/2.jpg" alt="Momento juntos">
-                <img src="img/3.jpg" alt="Momento juntos">
-                <img src="img/4.jpg" alt="Momento juntos">
-                <img src="img/5.png" alt="Momento juntos">
+    <!-- Navegación flotante -->
+    <header class="nav-wrapper">
+        <nav class="navbar" aria-label="Navegación principal">
+            <a href="#inicio" class="nav-link active" data-section="inicio">Inicio</a>
+            <a href="#tiempo" class="nav-link" data-section="tiempo">Tiempo</a>
+            <a href="#recuerdos" class="nav-link" data-section="recuerdos">Recuerdos</a>
+            <a href="#apoyo" class="nav-link" data-section="apoyo">Para Ti</a>
+            <a href="#reflexion" class="nav-link" data-section="reflexion">Carta</a>
+            <button type="button" class="ambient-toggle" id="ambient-toggle" aria-label="Activar o pausar pétalos flotantes" title="Alternar pétalos">
+                <span class="toggle-icon" aria-hidden="true">✦</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ================= 1. HERO EDITORIAL ================= -->
+        <section id="inicio" class="section hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content reveal">
+                    <span class="eyebrow">
+                        <span class="eyebrow-dot" aria-hidden="true"></span>
+                        Nuestro rinconcito en la web · Est. 24.11.2025
+                    </span>
+
+                    <h1 class="hero-title">
+                        Fiorella
+                        <span class="hero-ampersand" aria-hidden="true">&amp;</span>
+                        Reinaldo
+                    </h1>
+
+                    <p class="hero-lead">
+                        Un lugar tranquilo para guardar nuestra historia, celebrar cada instante y recordar siempre por qué elegimos caminar juntos.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#tiempo" class="btn btn-primary">
+                            <span>Nuestra historia</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <polyline points="19 12 12 19 5 12"></polyline>
+                            </svg>
+                        </a>
+                        <button type="button" class="btn btn-ghost" id="pulse-love-btn">
+                            <svg class="heart-svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                            </svg>
+                            <span id="pulse-love-label">Enviar un latido</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal reveal-delay-1">
+                    <div class="arch-frame">
+                        <div class="arch-inner">
+                            <img
+                                src="img/1.jpg"
+                                alt="Fiorella y Reinaldo abrazados sonriendo"
+                                class="hero-photo"
+                                data-lightbox-index="0"
+                            >
+                        </div>
+                        <div class="hero-badge" aria-live="polite">
+                            <span class="hero-badge-number" id="hero-total-days">—</span>
+                            <span class="hero-badge-label">días juntos</span>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="reflection-text">
-                <p>A menudo pensamos que las grandes historias de amor se miden por la ausencia de problemas, cuando en realidad se definen por la capacidad de superarlos. En los momentos de crisis es fácil dejarse llevar por el cansancio, por el orgullo o por la falsa idea de que soltar es más sencillo que reparar. Sin embargo, cuando me detengo a mirar lo que hemos construido, me doy cuenta de que lo nuestro no es algo que deba arrojarse al viento a la primera tormenta.</p>
-                <p>Luchar por una relación no significa aferrarse a la comodidad ni ignorar los errores; significa reconocer que dos personas imperfectas pueden elegir seguir aprendiendo la una de la otra. Las heridas, los desencuentros y la distancia no siempre son el anuncio de un final, sino la señal clara de que la dinámica que llevábamos necesita evolucionar. Lo fácil es marcharse cuando el camino se vuelve empinado; lo valiente, lo verdaderamente valioso, es sentarnos a hablar con la verdad en la mano, desarmar los reproches y preguntarnos si el amor que nos unió sigue teniendo la fuerza para transformarnos.</p>
-                <p>La motivación no surge de la nada ni de la ilusión de un futuro perfecto. Nace del respeto hacia nuestra historia, de la complicidad que hemos compartido y de la certeza de que los momentos difíciles son pasajeros si el compromiso es mutuo. No busco que mágicamente todo se solucione hoy, ni pretendo ignorar lo que nos ha dolido. Lo que propongo es la madurez de no rendirnos sin haber dado lo mejor de nosotros.</p>
-                <p>Si en el fondo de este proceso aún existe el deseo sincero de coincidir, vale la pena bajar la guardia y volver a intentarlo. No para repetir los mismos errores, sino para reconstruirnos sobre bases más sólidas, más humanas y más reales. Al final, las relaciones más fuertes no son las que nunca se rompieron, sino las que supieron sanar juntas.</p>
+        <!-- Separador ornamental -->
+        <div class="ornament-divider" aria-hidden="true">
+            <span></span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/>
+            </svg>
+            <span></span>
+        </div>
+
+        <!-- ================= 2. CONTADOR EN TIEMPO REAL ================= -->
+        <section id="tiempo" class="section time-section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="section-tag">Capítulo I · Nuestro Tiempo</span>
+                    <h2>Cada segundo cuenta contigo</h2>
+                    <p class="section-subtitle">Desde el 24 de noviembre de 2025, construyendo recuerdos que se quedan para siempre.</p>
+                </div>
+
+                <div class="time-panel reveal reveal-delay-1">
+                    <div class="milestone-ribbon" id="milestone-ribbon">
+                        <span class="milestone-sparkle" aria-hidden="true">✦</span>
+                        <span id="milestone-text">Contando nuestra historia en tiempo real</span>
+                    </div>
+
+                    <div class="counter-grid" id="live-counter" aria-label="Tiempo transcurrido desde el 24 de noviembre de 2025">
+                        <div class="time-unit" id="unit-years-wrap" hidden>
+                            <span class="time-value" id="cd-years">0</span>
+                            <span class="time-label" id="lbl-years">Año</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="cd-months">0</span>
+                            <span class="time-label" id="lbl-months">Meses</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="cd-days">0</span>
+                            <span class="time-label" id="lbl-days">Días</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="cd-hours">00</span>
+                            <span class="time-label">Horas</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="cd-minutes">00</span>
+                            <span class="time-label">Minutos</span>
+                        </div>
+                        <div class="time-unit time-unit-accent">
+                            <span class="time-value" id="cd-seconds">00</span>
+                            <span class="time-label">Segundos</span>
+                        </div>
+                    </div>
+
+                    <div class="dedication-quote">
+                        <span class="quote-mark" aria-hidden="true">“</span>
+                        <p>
+                            Desde que empezamos esta aventura, siento como si mi corazón te conociera de siempre.
+                        </p>
+                        <footer class="quote-meta">
+                            <span id="next-milestone-info">Próximo aniversario mensual en camino</span>
+                        </footer>
+                    </div>
+                </div>
             </div>
-        </main>
-    </section>
+        </section>
 
-    <div class="hearts-container"></div>
+        <!-- ================= 3. GALERÍA POLAROID + LIGHTBOX ================= -->
+        <section id="recuerdos" class="section gallery-section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="section-tag">Capítulo II · Álbum de Recuerdos</span>
+                    <h2>Pequeños instantes, grandes memorias</h2>
+                    <p class="section-subtitle">Toca cualquier fotografía para verla en detalle y recorrer nuestro álbum.</p>
+                </div>
+
+                <div class="polaroid-grid" id="polaroid-grid">
+                    <figure class="polaroid reveal" data-tilt="-1.6">
+                        <button type="button" class="polaroid-trigger" data-lightbox-index="0" aria-label="Abrir foto 1: Contigo todo es hogar">
+                            <div class="polaroid-img-wrap ratio-square">
+                                <img src="img/1.jpg" alt="Fiorella y Reinaldo abrazados" loading="lazy" style="object-position: center 22%;">
+                            </div>
+                            <figcaption class="polaroid-caption">Contigo todo es hogar</figcaption>
+                        </button>
+                    </figure>
+
+                    <figure class="polaroid reveal reveal-delay-1" data-tilt="1.4">
+                        <button type="button" class="polaroid-trigger" data-lightbox-index="1" aria-label="Abrir foto 2: Sonrisas que iluminan">
+                            <div class="polaroid-img-wrap ratio-square">
+                                <img src="img/2.jpg" alt="Fiorella y Reinaldo sonriendo juntos" loading="lazy" style="object-position: center 25%;">
+                            </div>
+                            <figcaption class="polaroid-caption">Sonrisas que iluminan</figcaption>
+                        </button>
+                    </figure>
+
+                    <figure class="polaroid polaroid-tall reveal reveal-delay-2" data-tilt="-1.1">
+                        <button type="button" class="polaroid-trigger" data-lightbox-index="2" aria-label="Abrir foto 3: Nuestra complicidad">
+                            <div class="polaroid-img-wrap ratio-portrait">
+                                <img src="img/3.jpg" alt="Selfie alegre de Fiorella y Reinaldo" loading="lazy" style="object-position: center 20%;">
+                            </div>
+                            <figcaption class="polaroid-caption">Nuestra complicidad</figcaption>
+                        </button>
+                    </figure>
+
+                    <figure class="polaroid reveal" data-tilt="1.7">
+                        <button type="button" class="polaroid-trigger" data-lightbox-index="3" aria-label="Abrir foto 4: Abrazos que curan">
+                            <div class="polaroid-img-wrap ratio-square">
+                                <img src="img/4.jpg" alt="Fiorella apoyada en el hombro de Reinaldo" loading="lazy" style="object-position: center 20%;">
+                            </div>
+                            <figcaption class="polaroid-caption">Abrazos que curan</figcaption>
+                        </button>
+                    </figure>
+
+                    <figure class="polaroid reveal reveal-delay-1" data-tilt="-1.4">
+                        <button type="button" class="polaroid-trigger" data-lightbox-index="4" aria-label="Abrir foto 5: Cada paseo juntos">
+                            <div class="polaroid-img-wrap ratio-portrait-soft">
+                                <img src="img/5.png" alt="Fiorella y Reinaldo paseando" loading="lazy" style="object-position: center 28%;">
+                            </div>
+                            <figcaption class="polaroid-caption">Cada paseo juntos</figcaption>
+                        </button>
+                    </figure>
+
+                    <figure class="polaroid reveal reveal-delay-2" data-tilt="1.2">
+                        <button type="button" class="polaroid-trigger" data-lightbox-index="5" aria-label="Abrir foto 6: Tardes favoritas">
+                            <div class="polaroid-img-wrap ratio-portrait-soft">
+                                <img src="img/6.png" alt="Fiorella y Reinaldo compartiendo una tarde" loading="lazy" style="object-position: center 30%;">
+                            </div>
+                            <figcaption class="polaroid-caption">Tardes favoritas</figcaption>
+                        </button>
+                    </figure>
+
+                    <figure class="polaroid reveal" data-tilt="-0.9">
+                        <button type="button" class="polaroid-trigger" data-lightbox-index="6" aria-label="Abrir foto 7: Siempre nosotros">
+                            <div class="polaroid-img-wrap ratio-portrait-soft">
+                                <img src="img/7.png" alt="Fiorella y Reinaldo juntos" loading="lazy" style="object-position: center 26%;">
+                            </div>
+                            <figcaption class="polaroid-caption">Siempre nosotros</figcaption>
+                        </button>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 4. PARA TI (APOYO + RESPIRO INTERACTIVO) ================= -->
+        <section id="apoyo" class="section support-section">
+            <div class="container container-narrow">
+                <article class="support-card reveal">
+                    <div class="support-top-ornament" aria-hidden="true">✦</div>
+                    <span class="section-tag">Capítulo III · Para Ti</span>
+                    <h2 class="support-heading">Un día a la vez</h2>
+
+                    <div class="support-message-box">
+                        <p id="support-note-text" class="support-note-text">
+                            No tienes que tener todo resuelto hoy. Avanza a tu ritmo, respira y confía en que cada paso te está llevando justo donde debes estar.
+                        </p>
+                    </div>
+
+                    <!-- Mini herramientas interactivas de calma -->
+                    <div class="support-controls">
+                        <button type="button" class="btn btn-soft" id="next-note-btn">
+                            <span>Otra nota para ti</span>
+                            <span class="note-counter" id="note-counter">1 / 5</span>
+                        </button>
+                        <button type="button" class="btn btn-outline" id="breathe-toggle-btn" aria-expanded="false" aria-controls="breathe-widget">
+                            <span>Tómate un respiro</span>
+                        </button>
+                    </div>
+
+                    <!-- Guía de respiración relajante (colapsable) -->
+                    <div class="breathe-widget" id="breathe-widget" hidden>
+                        <div class="breathe-circle" id="breathe-circle" aria-live="polite">
+                            <span id="breathe-phase">Inhala</span>
+                        </div>
+                        <p class="breathe-hint">Sigue el ritmo suave durante unos segundos. Estoy aquí contigo.</p>
+                    </div>
+
+                    <footer class="support-signature">
+                        <span class="script-signature">Siempre contigo, Reinaldo</span>
+                    </footer>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= 5. SOBRE INTERACTIVO + REFLEXIÓN ================= -->
+        <section id="reflexion" class="section letter-section">
+            <div class="container container-narrow">
+                <div class="section-heading reveal">
+                    <span class="section-tag">Capítulo IV · Reflexión</span>
+                    <h2>El valor de no rendirse</h2>
+                    <p class="section-subtitle">Una carta escrita desde el corazón, sobre nosotros.</p>
+                </div>
+
+                <!-- Sobre interactivo con sello de lacre -->
+                <div class="envelope-stage reveal reveal-delay-1" id="envelope-stage">
+                    <div class="envelope-wrapper" id="envelope-wrapper">
+                        <div class="envelope" id="envelope" role="button" tabindex="0" aria-expanded="false" aria-controls="letter-sheet" aria-label="Abrir la carta El valor de no rendirse">
+                            <div class="envelope-back"></div>
+                            <div class="envelope-paper-peek">
+                                <span class="peek-title">El valor de no rendirse</span>
+                                <span class="peek-lines" aria-hidden="true"></span>
+                            </div>
+                            <div class="envelope-front"></div>
+                            <div class="envelope-flap"></div>
+
+                            <div class="wax-seal" aria-hidden="true">
+                                <span class="wax-seal-monogram">F &amp; R</span>
+                            </div>
+                        </div>
+
+                        <p class="envelope-cta" id="envelope-cta">
+                            Toca el sello de lacre para abrir la carta
+                        </p>
+                    </div>
+
+                    <!-- Carta desplegada -->
+                    <article class="letter-sheet" id="letter-sheet" aria-hidden="true">
+                        <div class="letter-header">
+                            <span class="letter-date">Para Fiorella</span>
+                            <h3>El valor de no rendirse</h3>
+                            <div class="letter-rule" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="letter-body">
+                            <p>A menudo pensamos que las grandes historias de amor se miden por la ausencia de problemas, cuando en realidad se definen por la capacidad de superarlos. En los momentos de crisis es fácil dejarse llevar por el cansancio, por el orgullo o por la falsa idea de que soltar es más sencillo que reparar. Sin embargo, cuando me detengo a mirar lo que hemos construido, me doy cuenta de que lo nuestro no es algo que deba arrojarse al viento a la primera tormenta.</p>
+
+                            <p>Luchar por una relación no significa aferrarse a la comodidad ni ignorar los errores; significa reconocer que dos personas imperfectas pueden elegir seguir aprendiendo la una de la otra. Las heridas, los desencuentros y la distancia no siempre son el anuncio de un final, sino la señal clara de que la dinámica que llevábamos necesita evolucionar. Lo fácil es marcharse cuando el camino se vuelve empinado; lo valiente, lo verdaderamente valioso, es sentarnos a hablar con la verdad en la mano, desarmar los reproches y preguntarnos si el amor que nos unió sigue teniendo la fuerza para transformarnos.</p>
+
+                            <p>La motivación no surge de la nada ni de la ilusión de un futuro perfecto. Nace del respeto hacia nuestra historia, de la complicidad que hemos compartido y de la certeza de que los momentos difíciles son pasajeros si el compromiso es mutuo. No busco que mágicamente todo se solucione hoy, ni pretendo ignorar lo que nos ha dolido. Lo que propongo es la madurez de no rendirnos sin haber dado lo mejor de nosotros.</p>
+
+                            <p>Si en el fondo de este proceso aún existe el deseo sincero de coincidir, vale la pena bajar la guardia y volver a intentarlo. No para repetir los mismos errores, sino para reconstruirnos sobre bases más sólidas, más humanas y más reales. Al final, las relaciones más fuertes no son las que nunca se rompieron, sino las que supieron sanar juntas.</p>
+                        </div>
+
+                        <footer class="letter-footer">
+                            <div class="letter-signoff">
+                                <span class="signoff-pre">Con todo mi cariño y verdad,</span>
+                                <span class="script-signature">Reinaldo</span>
+                            </div>
+                            <button type="button" class="btn btn-outline btn-sm" id="close-letter-btn">
+                                Guardar carta en el sobre
+                            </button>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p class="footer-monogram">Fiorella &amp; Reinaldo</p>
+            <p class="footer-note">Nuestro lugar en la web · Desde el 24 de noviembre de 2025</p>
+            <a href="#inicio" class="back-to-top" aria-label="Volver al inicio">
+                Volver arriba ↑
+            </a>
+        </div>
+    </footer>
+
+    <!-- ================= LIGHTBOX A PANTALLA COMPLETA ================= -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de fotografías" hidden>
+        <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+        <div class="lightbox-dialog">
+            <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Cerrar visor">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <button type="button" class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Foto anterior">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+
+            <figure class="lightbox-figure">
+                <img id="lightbox-img" src="" alt="">
+                <figcaption class="lightbox-meta">
+                    <span id="lightbox-caption"></span>
+                    <span id="lightbox-counter" class="lightbox-counter"></span>
+                </figcaption>
+            </figure>
+
+            <button type="button" class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Foto siguiente">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
